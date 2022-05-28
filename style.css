@@ -104,7 +104,10 @@ section {
 .main {
     display: flex;
     justify-content: space-around;
-    margin: 30px auto;
+    padding-top: 20px;
+    margin-top: -10px;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 80%;
     max-height: 100%;
     padding-bottom: 50px;
@@ -121,10 +124,7 @@ ul {
     max-width: 15%;
 }
 
-.main .left ul #click_fru,
-#click_nut,
-#click_veg,
-#click_all {
+.main .left ul li {
     background-color: var(--green-main);
     color: white;
     padding: 10px 10px;
@@ -142,8 +142,8 @@ ul {
 }
 
 .main .left ul li:hover {
-    background-color: rgba(7, 121, 21, 0.9);
     cursor: pointer;
+    background-color: rgba(7, 121, 21, 0.9);
 }
 
 .card-item {
