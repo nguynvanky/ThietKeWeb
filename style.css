@@ -1,0 +1,201 @@
+:root {
+    --green-main: #077915;
+    --white: #fff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+nav .cart {
+    margin-right: 5%;
+}
+
+a ul {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    color: #077915;
+    box-shadow: 0 10px 10px 0 rgba(181, 180, 180, 0.2);
+    border-radius: 20px;
+}
+
+a:hover>ul {
+    visibility: visible;
+    opacity: 1;
+}
+
+button,
+input {
+    outline: none;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 99.8%;
+    height: 90px;
+    background-color: var(--green-main);
+    border: 0 solid var(--green-main);
+    box-shadow: 0 10px 10px 0 rgba(181, 180, 180, 0.2);
+    transition: all 0.1s linear;
+}
+
+.cart a {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+#logo {
+    cursor: pointer;
+    color: white;
+    font-size: 40px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.search {
+    display: flex;
+}
+
+.search button {
+    color: var(--green-main);
+    padding: 10px 20px;
+    background-color: var(--white);
+    border: 1px solid var(--green-main);
+    transition: all 0.5s linear;
+}
+
+.search button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.search input {
+    box-sizing: border-box;
+    width: 500px;
+    margin-right: 1px;
+    padding: 10px;
+    color: black;
+}
+
+.search input:active {
+    outline-color: 1px #077915;
+}
+
+section {
+    background-color: #f5f5f5;
+    margin-top: 10px;
+    top: 90px;
+    position: relative;
+}
+
+.main {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px auto;
+    max-width: 80%;
+    max-height: 100%;
+    padding-bottom: 50px;
+}
+
+ul {
+    list-style: none;
+}
+
+.main .left {
+    min-height: 1000px;
+    background-color: white;
+    min-width: 15%;
+    max-width: 15%;
+}
+
+.main .left ul #click_fru,
+#click_nut,
+#click_veg,
+#click_all {
+    background-color: var(--green-main);
+    color: white;
+    padding: 10px 10px;
+    border-bottom: 5px white solid;
+    transition: 0.25s linear;
+}
+
+.main .content {
+    row-gap: 30px;
+    justify-content: space-around;
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: auto auto auto auto;
+    width: 1200px;
+}
+
+.main .left ul li:hover {
+    background-color: rgba(7, 121, 21, 0.9);
+    cursor: pointer;
+}
+
+.card-item {
+    background-color: white;
+    text-align: center;
+    padding-bottom: 20px;
+    width: 250px;
+    transition: all 0.2s linear;
+    max-height: 310px;
+    box-shadow: 0 5px 5px 0 rgba(181, 180, 180, 0.2);
+}
+
+.card-item img {
+    width: 205.16px;
+    height: 205.16px;
+}
+
+.card-item #btn-add {
+    background-color: var(--green-main);
+    color: white;
+    padding: 5px 10px;
+    border: #077915 solid 1px;
+}
+
+.card-item #btn-add:hover {
+    cursor: pointer;
+}
+
+.card-item #title,
+#cost {
+    font-size: 20px;
+    margin-bottom: 0.5em;
+}
+
+.card-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 16px 2px rgb(0 0 0 / 20%);
+}
+
+#backtop {
+    bottom: 20px;
+    right: 50px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    background-color: var(--green-main);
+    color: white;
+    border-radius: 50%;
+}
+
+.footer {
+    min-height: 200px;
+}
