@@ -82,6 +82,10 @@ nav {
     cursor: pointer;
 }
 
+.search button:active {
+    box-shadow: 0 2px 5px var(--white);
+}
+
 .search input {
     box-sizing: border-box;
     width: 500px;
@@ -91,7 +95,7 @@ nav {
 }
 
 .search input:active {
-    outline-color: 1px #077915;
+    box-shadow: 0 2px 5px var(--green-main);
 }
 
 section {
@@ -161,15 +165,79 @@ ul {
     height: 205.16px;
 }
 
-.card-item #btn-add {
+.card-item .btn-add {
     background-color: var(--green-main);
     color: white;
     padding: 5px 10px;
     border: #077915 solid 1px;
+    overflow: hidden;
+    position: relative;
+    transition: .1s;
 }
 
-.card-item #btn-add:hover {
+.card-item .btn-add:hover {
     cursor: pointer;
+}
+
+.card-item .btn-add:active {
+    box-shadow: 0 2px 5px #000;
+}
+
+.click_nut span {
+    height: 1px;
+    width: 1px;
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: ripple .3s;
+}
+
+.click_all span {
+    height: 1px;
+    width: 1px;
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: ripple .3s;
+}
+
+.click_veg span {
+    height: 1px;
+    width: 1px;
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: ripple .3s;
+}
+
+.click_fru span {
+    height: 1px;
+    width: 1px;
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: ripple .3s;
+}
+
+.card-item .btn-add span {
+    height: 1px;
+    width: 1px;
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: ripple .3s;
+}
+
+@keyframes ripple {
+    to {
+        opacity: 0;
+        transform: scale(70);
+    }
 }
 
 .card-item #title,
@@ -194,6 +262,14 @@ ul {
     background-color: var(--green-main);
     color: white;
     border-radius: 50%;
+}
+
+#backtop:hover {
+    cursor: pointer;
+}
+
+#backtop:active {
+    box-shadow: 0 2px 5px var(--green-main);
 }
 
 .footer {
