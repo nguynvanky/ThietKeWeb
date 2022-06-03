@@ -17,11 +17,11 @@
 </head>
 
 <body>
-    <nav id="nav" style="display:flex;">
+    <nav id="navbar" style="display:flex; justify-content: center;">
         <div onClick="location.href='index.html'" id="logo">VGSHOP</div>
-        <div class="input-group w-50">
-            <input style="outline: none;" type="search" class="form-control rounded w-20" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-            <button type="button" class="btn btn-primary" style="box-shadow:none;border-color:white; color:white; background-color: #077915; ">search</button>
+        <div class="input-group" style="width: 40% !important; margin: 0px 5%;">
+            <input style="font-size: 1.7vh; " type="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+            <button class="btn btn-primary" style=" font-size: 1.7vh;border-color:white; color:white; background-color: #077915; ">search</button>
         </div>
         <!-- <div class="search">
             <input type="text" id="" placeholder="Search by any keyword">
@@ -39,7 +39,7 @@
     <section style="margin-top:0;">
         <div class="container">
             <div class="row">
-                <div class="col-2">
+                <div class="col-12 col-sm-6 col-md-2">
                     <div class="nav flex-column" style="margin-top:20px;">
                         <ul>
                             <li class="nav-link click_all" id="all" onclick="display_all()">
@@ -51,14 +51,14 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-10">
+                <div class="col-12 col-sm-12 col-md-10">
                     <div class="row">
                         <div class="col">
                             <div class="card-item vegetables">
                                 <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/brinjal.jpg" alt="">
                                 <p id="title">Corn - 1 KG</p>
                                 <p id="cost">85</p>
-                                <button class="btn-add" type="button">ADD TO CARD</button>
+                                <button class="btn-add" type="button">ADD</button>
                             </div>
                         </div>
                         <div class="col">
@@ -66,7 +66,7 @@
                                 <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/onion.jpg" alt="">
                                 <p id="title">Corn - 1 KG</p>
                                 <p id="cost">75</p>
-                                <button class="btn-add" type="button">ADD TO CARD</button>
+                                <button class="btn-add" type="button">ADD</button>
                             </div>
                         </div>
                         <div class="col">
@@ -74,7 +74,7 @@
                                 <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/cashews.jpg" alt="">
                                 <p id="title">Corn - 1 KG</p>
                                 <p id="cost">75</p>
-                                <button class="btn-add" type="button">ADD TO CARD</button>
+                                <button class="btn-add" type="button">ADD</button>
                             </div>
                         </div>
                         <div class="col">
@@ -82,7 +82,7 @@
                                 <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/nuts-mixture.jpg" alt="">
                                 <p id="title">Corn - 1 KG</p>
                                 <p id="cost">75</p>
-                                <button class="btn-add" type="button">ADD TO CARD</button>
+                                <button class="btn-add" type="button">ADD</button>
                             </div>
                         </div>
                     </div>
@@ -92,7 +92,7 @@
                                 <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/walnuts.jpg" alt="">
                                 <p id="title">Corn - 1 KG</p>
                                 <p id="cost">75</p>
-                                <button class="btn-add" type="button">ADD TO CARD</button>
+                                <button class="btn-add" type="button">ADD</button>
                             </div>
                         </div>
                         <div class="col">
@@ -100,7 +100,7 @@
                                 <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/corn.jpg" alt="">
                                 <p id="title">Corn - 1 KG</p>
                                 <p id="cost">75</p>
-                                <button class="btn-add" type="button" onclick="showSuccessToast()">ADD TO CARD</button>
+                                <button class="btn-add" type="button" onclick="showSuccessToast()">ADD</button>
                             </div>
                         </div>
                         <div class="col">
@@ -108,7 +108,7 @@
                                 <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/broccoli.jpg" alt="">
                                 <p id="title">Corn - 1 KG</p>
                                 <p id="cost">75</p>
-                                <button class="btn-add" type="button">ADD TO CARD</button>
+                                <button class="btn-add" type="button">ADD</button>
                             </div>
                         </div>
                         <div class="col">
@@ -116,7 +116,7 @@
                                 <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/cauliflower.jpg" alt="">
                                 <p id="title">Corn - 1 KG</p>
                                 <p id="cost">75</p>
-                                <button class="btn-add" type="button">ADD TO CARD</button>
+                                <button class="btn-add" type="button">ADD</button>
                             </div>
                         </div>
                     </div>
@@ -126,7 +126,7 @@
                                 <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/cucumber.jpg" alt="">
                                 <p id="title">Corn - 1 KG</p>
                                 <p id="cost">75</p>
-                                <button class="btn-add" type="button">ADD TO CARD</button>
+                                <button class="btn-add" type="button">ADD</button>
                             </div>
                         </div>
                         <div class="col">
@@ -134,7 +134,7 @@
                                 <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/beetroot.jpg" alt="">
                                 <p id="title">Corn - 1 KG</p>
                                 <p id="cost">75</p>
-                                <button class="btn-add" type="button">ADD TO CARD</button>
+                                <button class="btn-add" type="button">ADD</button>
                             </div>
                         </div>
                         <div class="col">
@@ -142,7 +142,7 @@
                                 <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/carrots.jpg" alt="">
                                 <p id="title">Corn - 1 KG</p>
                                 <p id="cost">75</p>
-                                <button class="btn-add" type="button">ADD TO CARD</button>
+                                <button class="btn-add" type="button">ADD</button>
                             </div>
                         </div>
                         <div class="col">
@@ -150,7 +150,7 @@
                                 <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/tomato.jpg" alt="">
                                 <p id="title">Corn - 1 KG</p>
                                 <p id="cost">75</p>
-                                <button class="btn-add" type="button">ADD TO CARD</button>
+                                <button class="btn-add" type="button">ADD</button>
                             </div>
                         </div>
                     </div>
@@ -160,7 +160,7 @@
                                 <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/beans.jpg" alt="">
                                 <p id="title">Corn - 1 KG</p>
                                 <p id="cost">75</p>
-                                <button class="btn-add" type="button">ADD TO CARD</button>
+                                <button class="btn-add" type="button">ADD</button>
                             </div>
                         </div>
                         <div class="col">
@@ -168,7 +168,7 @@
                                 <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/apple.jpg" alt="">
                                 <p id="title">Corn - 1 KG</p>
                                 <p id="cost">75</p>
-                                <button class="btn-add" type="button">ADD TO CARD</button>
+                                <button class="btn-add" type="button">ADD</button>
                             </div>
                         </div>
                         <div class="col">
@@ -176,7 +176,7 @@
                                 <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/banana.jpg" alt="">
                                 <p id="title">Corn - 1 KG</p>
                                 <p id="cost">75</p>
-                                <button class="btn-add" type="button">ADD TO CARD</button>
+                                <button class="btn-add" type="button">ADD</button>
                             </div>
                         </div>
                         <div class="col">
@@ -184,7 +184,7 @@
                                 <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/grapes.jpg" alt="">
                                 <p id="title">Corn - 1 KG</p>
                                 <p id="cost">75</p>
-                                <button class="btn-add" type="button">ADD TO CARD</button>
+                                <button class="btn-add" type="button">ADD</button>
                             </div>
                         </div>
                     </div>
@@ -194,7 +194,7 @@
                                 <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/mango.jpg" alt="">
                                 <p id="title">Corn - 1 KG</p>
                                 <p id="cost">75</p>
-                                <button class="btn-add" type="button">ADD TO CARD</button>
+                                <button class="btn-add" type="button">ADD</button>
                             </div>
                         </div>
                         <div class="col">
@@ -202,7 +202,7 @@
                                 <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/musk-melon.jpg" alt="">
                                 <p id="title">Corn - 1 KG</p>
                                 <p id="cost">75</p>
-                                <button class="btn-add" type="button">ADD TO CARD</button>
+                                <button class="btn-add" type="button">ADD</button>
                             </div>
                         </div>
                         <div class="col">
@@ -210,7 +210,7 @@
                                 <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/capsicum.jpg" alt="">
                                 <p id="title">Corn - 1 KG</p>
                                 <p id="cost">75</p>
-                                <button class="btn-add" type="button">ADD TO CARD</button>
+                                <button class="btn-add" type="button">ADD</button>
                             </div>
                         </div>
                         <div class="col">
@@ -218,7 +218,7 @@
                                 <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/button-mushroom.jpg" alt="">
                                 <p id="title">Corn - 1 KG</p>
                                 <p id="cost">75</p>
-                                <button class="btn-add" type="button">ADD TO CARD</button>
+                                <button class="btn-add" type="button">ADD</button>
                             </div>
                         </div>
                     </div>
@@ -228,7 +228,7 @@
                                 <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/potato.jpg" alt="">
                                 <p id="title">Corn - 1 KG</p>
                                 <p id="cost">75</p>
-                                <button class="btn-add" type="button">ADD TO CARD</button>
+                                <button class="btn-add" type="button">ADD</button>
                             </div>
                         </div>
                         <div class="col">
@@ -236,7 +236,7 @@
                                 <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/pumpkin.jpg" alt="">
                                 <p id="title">Corn - 1 KG</p>
                                 <p id="cost">75</p>
-                                <button class="btn-add" type="button">ADD TO CARD</button>
+                                <button class="btn-add" type="button">ADD</button>
                             </div>
                         </div>
                         <div class="col">
@@ -244,7 +244,7 @@
                                 <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/orange.jpg" alt="">
                                 <p id="title">Corn - 1 KG</p>
                                 <p id="cost">75</p>
-                                <button class="btn-add" type="button">ADD TO CARD</button>
+                                <button class="btn-add" type="button">ADD</button>
                             </div>
                         </div>
                         <div class="col">
@@ -252,7 +252,7 @@
                                 <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/pears.jpg" alt="">
                                 <p id="title">Corn - 1 KG</p>
                                 <p id="cost">75</p>
-                                <button class="btn-add" type="button">ADD TO CARD</button>
+                                <button class="btn-add" type="button">ADD</button>
                             </div>
                         </div>
                     </div>
@@ -262,7 +262,7 @@
                                 <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/pomegranate.jpg" alt="">
                                 <p id="title">Corn - 1 KG</p>
                                 <p id="cost">75</p>
-                                <button class="btn-add" type="button">ADD TO CARD</button>
+                                <button class="btn-add" type="button">ADD</button>
                             </div>
                         </div>
                         <div class="col">
@@ -270,7 +270,7 @@
                                 <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/raspberry.jpg" alt="">
                                 <p id="title">Corn - 1 KG</p>
                                 <p id="cost">75</p>
-                                <button class="btn-add" type="button">ADD TO CARD</button>
+                                <button class="btn-add" type="button">ADD</button>
                             </div>
                         </div>
                         <div class="col">
@@ -278,7 +278,7 @@
                                 <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/strawberry.jpg" alt="">
                                 <p id="title">Corn - 1 KG</p>
                                 <p id="cost">75</p>
-                                <button class="btn-add" type="button">ADD TO CARD</button>
+                                <button class="btn-add" type="button">ADD</button>
                             </div>
                         </div>
                         <div class="col">
@@ -286,7 +286,7 @@
                                 <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/water-melon.jpg" alt="">
                                 <p id="title">Corn - 1 KG</p>
                                 <p id="cost">75</p>
-                                <button class="btn-add" type="button">ADD TO CARD</button>
+                                <button class="btn-add" type="button">ADD</button>
                             </div>
                         </div>
                     </div>
@@ -296,7 +296,7 @@
                                 <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/almonds.jpg" alt="">
                                 <p id="title">Corn - 1 KG</p>
                                 <p id="cost">75</p>
-                                <button class="btn-add" type="button">ADD TO CARD</button>
+                                <button class="btn-add" type="button">ADD</button>
                             </div>
                         </div>
                         <div class="col">
@@ -304,7 +304,7 @@
                                 <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/pista.jpg" alt="">
                                 <p id="title">Corn - 1 KG</p>
                                 <p id="cost">75</p>
-                                <button class="btn-add" type="button">ADD TO CARD</button>
+                                <button class="btn-add" type="button">ADD</button>
                             </div>
                         </div>
                         <div class="col"></div>
