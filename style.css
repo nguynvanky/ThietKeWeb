@@ -51,6 +51,7 @@ nav {
 }
 
 #logo {
+    font-weight: 600;
     cursor: pointer;
     color: white;
     font-size: 3vh;
