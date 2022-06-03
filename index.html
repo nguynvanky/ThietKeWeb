@@ -9,226 +9,315 @@
     <title>Vegetables Shop</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css" integrity="sha384-eoTu3+HydHRBIjnCVwsFyCpUDZHZSFKEJD0mc3ZqSBSb6YhZzRHeiomAUWCstIWo" crossorigin="anonymous">
+    <!--Bootstrap 4-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <nav id="nav">
+    <nav id="nav" style="display:flex;">
         <div onClick="location.href='index.html'" id="logo">VGSHOP</div>
-        <div class="search">
+        <div class="input-group w-50">
+            <input style="outline: none;" type="search" class="form-control rounded w-20" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+            <button type="button" class="btn btn-primary" style="box-shadow:none;border-color:white; color:white; background-color: #077915; ">search</button>
+        </div>
+        <!-- <div class="search">
             <input type="text" id="" placeholder="Search by any keyword">
             <button type="button">Search</button>
-        </div>
+        </div> -->
         <div class="cart">
-            <a class="bi bi-cart2">
+            <a class="bi bi-cart2" style="color: white;">
                 <ul style="display:flex;">
-                    <p style="font-size: 16px; color: #077915; text-align:center; margin:auto;">Your Cart Is Empty</p>
+                    <p style="font-size: 16px; color: #077915; text-align:center; margin:auto;">Your Cart Is Empty
+                    </p>
                 </ul>
             </a>
         </div>
     </nav>
-    <section>
-        <div class="main">
-            <div class="left">
-                <ul>
-                    <li class="click_all" onclick="">All</li>
-                    <li class="click_veg" onclick="">Vegetables</li>
-                    <li class="click_fru" onclick="">Fruits</li>
-                    <li class="click_nut" onclick="">Nuts</li>
-                </ul>
-            </div>
-            <div class="content">
-                <div class="card-item vegetables">
-                    <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/brinjal.jpg" alt="">
-                    <p id="title">Corn - 1 KG</p>
-                    <p id="cost">85</p>
-                    <button class="btn-add" type="button">ADD TO CARD</button>
+    <section style="margin-top:0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <div class="nav flex-column" style="margin-top:20px;">
+                        <ul>
+                            <li class="nav-link click_all" id="all" onclick="display_all()">
+                                All
+                            </li>
+                            <li class="nav-link click_veg" id="veg" onclick="display_vetables()">Vegetables</li>
+                            <li class="nav-link click_fru" id="fru" onclick="display_fruits()">Fruits</li>
+                            <li class="nav-link click_nut" id="nut" onclick="display_nuts()">Nuts</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="card-item vegetables">
-                    <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/onion.jpg" alt="">
-                    <p id="title">Corn - 1 KG</p>
-                    <p id="cost">75</p>
-                    <button class="btn-add" type="button">ADD TO CARD</button>
+                <div class="col-10">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card-item vegetables">
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/brinjal.jpg" alt="">
+                                <p id="title">Corn - 1 KG</p>
+                                <p id="cost">85</p>
+                                <button class="btn-add" type="button">ADD TO CARD</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-item vegetables">
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/onion.jpg" alt="">
+                                <p id="title">Corn - 1 KG</p>
+                                <p id="cost">75</p>
+                                <button class="btn-add" type="button">ADD TO CARD</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-item nuts">
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/cashews.jpg" alt="">
+                                <p id="title">Corn - 1 KG</p>
+                                <p id="cost">75</p>
+                                <button class="btn-add" type="button">ADD TO CARD</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-item nuts">
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/nuts-mixture.jpg" alt="">
+                                <p id="title">Corn - 1 KG</p>
+                                <p id="cost">75</p>
+                                <button class="btn-add" type="button">ADD TO CARD</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card-item nuts">
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/walnuts.jpg" alt="">
+                                <p id="title">Corn - 1 KG</p>
+                                <p id="cost">75</p>
+                                <button class="btn-add" type="button">ADD TO CARD</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-item vegetables">
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/corn.jpg" alt="">
+                                <p id="title">Corn - 1 KG</p>
+                                <p id="cost">75</p>
+                                <button class="btn-add" type="button" onclick="showSuccessToast()">ADD TO CARD</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-item vegetables">
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/broccoli.jpg" alt="">
+                                <p id="title">Corn - 1 KG</p>
+                                <p id="cost">75</p>
+                                <button class="btn-add" type="button">ADD TO CARD</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-item vegetables">
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/cauliflower.jpg" alt="">
+                                <p id="title">Corn - 1 KG</p>
+                                <p id="cost">75</p>
+                                <button class="btn-add" type="button">ADD TO CARD</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card-item vegetables">
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/cucumber.jpg" alt="">
+                                <p id="title">Corn - 1 KG</p>
+                                <p id="cost">75</p>
+                                <button class="btn-add" type="button">ADD TO CARD</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-item vegetables">
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/beetroot.jpg" alt="">
+                                <p id="title">Corn - 1 KG</p>
+                                <p id="cost">75</p>
+                                <button class="btn-add" type="button">ADD TO CARD</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-item vegetables">
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/carrots.jpg" alt="">
+                                <p id="title">Corn - 1 KG</p>
+                                <p id="cost">75</p>
+                                <button class="btn-add" type="button">ADD TO CARD</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-item vegetables">
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/tomato.jpg" alt="">
+                                <p id="title">Corn - 1 KG</p>
+                                <p id="cost">75</p>
+                                <button class="btn-add" type="button">ADD TO CARD</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card-item vegetables">
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/beans.jpg" alt="">
+                                <p id="title">Corn - 1 KG</p>
+                                <p id="cost">75</p>
+                                <button class="btn-add" type="button">ADD TO CARD</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-item fruits">
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/apple.jpg" alt="">
+                                <p id="title">Corn - 1 KG</p>
+                                <p id="cost">75</p>
+                                <button class="btn-add" type="button">ADD TO CARD</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-item fruits">
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/banana.jpg" alt="">
+                                <p id="title">Corn - 1 KG</p>
+                                <p id="cost">75</p>
+                                <button class="btn-add" type="button">ADD TO CARD</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-item fruits">
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/grapes.jpg" alt="">
+                                <p id="title">Corn - 1 KG</p>
+                                <p id="cost">75</p>
+                                <button class="btn-add" type="button">ADD TO CARD</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card-item fruits">
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/mango.jpg" alt="">
+                                <p id="title">Corn - 1 KG</p>
+                                <p id="cost">75</p>
+                                <button class="btn-add" type="button">ADD TO CARD</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-item fruits">
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/musk-melon.jpg" alt="">
+                                <p id="title">Corn - 1 KG</p>
+                                <p id="cost">75</p>
+                                <button class="btn-add" type="button">ADD TO CARD</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-item vegetables">
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/capsicum.jpg" alt="">
+                                <p id="title">Corn - 1 KG</p>
+                                <p id="cost">75</p>
+                                <button class="btn-add" type="button">ADD TO CARD</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-item vegetables">
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/button-mushroom.jpg" alt="">
+                                <p id="title">Corn - 1 KG</p>
+                                <p id="cost">75</p>
+                                <button class="btn-add" type="button">ADD TO CARD</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card-item vegetables">
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/potato.jpg" alt="">
+                                <p id="title">Corn - 1 KG</p>
+                                <p id="cost">75</p>
+                                <button class="btn-add" type="button">ADD TO CARD</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-item vegetables">
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/pumpkin.jpg" alt="">
+                                <p id="title">Corn - 1 KG</p>
+                                <p id="cost">75</p>
+                                <button class="btn-add" type="button">ADD TO CARD</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-item fruits">
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/orange.jpg" alt="">
+                                <p id="title">Corn - 1 KG</p>
+                                <p id="cost">75</p>
+                                <button class="btn-add" type="button">ADD TO CARD</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-item fruits">
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/pears.jpg" alt="">
+                                <p id="title">Corn - 1 KG</p>
+                                <p id="cost">75</p>
+                                <button class="btn-add" type="button">ADD TO CARD</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card-item fruits">
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/pomegranate.jpg" alt="">
+                                <p id="title">Corn - 1 KG</p>
+                                <p id="cost">75</p>
+                                <button class="btn-add" type="button">ADD TO CARD</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-item fruits">
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/raspberry.jpg" alt="">
+                                <p id="title">Corn - 1 KG</p>
+                                <p id="cost">75</p>
+                                <button class="btn-add" type="button">ADD TO CARD</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-item fruits">
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/strawberry.jpg" alt="">
+                                <p id="title">Corn - 1 KG</p>
+                                <p id="cost">75</p>
+                                <button class="btn-add" type="button">ADD TO CARD</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-item fruits">
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/water-melon.jpg" alt="">
+                                <p id="title">Corn - 1 KG</p>
+                                <p id="cost">75</p>
+                                <button class="btn-add" type="button">ADD TO CARD</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card-item nuts">
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/almonds.jpg" alt="">
+                                <p id="title">Corn - 1 KG</p>
+                                <p id="cost">75</p>
+                                <button class="btn-add" type="button">ADD TO CARD</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-item nuts">
+                                <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/pista.jpg" alt="">
+                                <p id="title">Corn - 1 KG</p>
+                                <p id="cost">75</p>
+                                <button class="btn-add" type="button">ADD TO CARD</button>
+                            </div>
+                        </div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                    </div>
                 </div>
-                <div class="card-item nuts">
-                    <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/nuts-mixture.jpg" alt="">
-                    <p id="title">Corn - 1 KG</p>
-                    <p id="cost">75</p>
-                    <button class="btn-add" type="button">ADD TO CARD</button>
-                </div>
-                <div class="card-item nuts">
-                    <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/cashews.jpg" alt="">
-                    <p id="title">Corn - 1 KG</p>
-                    <p id="cost">75</p>
-                    <button class="btn-add" type="button">ADD TO CARD</button>
-                </div>
-                <div class="card-item nuts">
-                    <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/walnuts.jpg" alt="">
-                    <p id="title">Corn - 1 KG</p>
-                    <p id="cost">75</p>
-                    <button class="btn-add" type="button">ADD TO CARD</button>
-                </div>
-                <div class="card-item vegetables">
-                    <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/corn.jpg" alt="">
-                    <p id="title">Corn - 1 KG</p>
-                    <p id="cost">75</p>
-                    <button class="btn-add" type="button" onclick="showSuccessToast()">ADD TO CARD</button>
-                </div>
-                <div class="card-item vegetables">
-                    <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/broccoli.jpg" alt="">
-                    <p id="title">Corn - 1 KG</p>
-                    <p id="cost">75</p>
-                    <button class="btn-add" type="button">ADD TO CARD</button>
-                </div>
-                <div class="card-item vegetables">
-                    <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/cauliflower.jpg" alt="">
-                    <p id="title">Corn - 1 KG</p>
-                    <p id="cost">75</p>
-                    <button class="btn-add" type="button">ADD TO CARD</button>
-                </div>
-                <div class="card-item vegetables">
-                    <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/cucumber.jpg" alt="">
-                    <p id="title">Corn - 1 KG</p>
-                    <p id="cost">75</p>
-                    <button class="btn-add" type="button">ADD TO CARD</button>
-                </div>
-                <div class="card-item vegetables">
-                    <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/beetroot.jpg" alt="">
-                    <p id="title">Corn - 1 KG</p>
-                    <p id="cost">75</p>
-                    <button class="btn-add" type="button">ADD TO CARD</button>
-                </div>
-                <div class="card-item vegetables">
-                    <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/carrots.jpg" alt="">
-                    <p id="title">Corn - 1 KG</p>
-                    <p id="cost">75</p>
-                    <button class="btn-add" type="button">ADD TO CARD</button>
-                </div>
-                <div class="card-item vegetables">
-                    <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/tomato.jpg" alt="">
-                    <p id="title">Corn - 1 KG</p>
-                    <p id="cost">75</p>
-                    <button class="btn-add" type="button">ADD TO CARD</button>
-                </div>
-                <div class="card-item vegetables">
-                    <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/beans.jpg" alt="">
-                    <p id="title">Corn - 1 KG</p>
-                    <p id="cost">75</p>
-                    <button class="btn-add" type="button">ADD TO CARD</button>
-                </div>
-
-                <div class="card-item fruits">
-                    <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/apple.jpg" alt="">
-                    <p id="title">Corn - 1 KG</p>
-                    <p id="cost">75</p>
-                    <button class="btn-add" type="button">ADD TO CARD</button>
-                </div>
-                <div class="card-item fruits">
-                    <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/banana.jpg" alt="">
-                    <p id="title">Corn - 1 KG</p>
-                    <p id="cost">75</p>
-                    <button class="btn-add" type="button">ADD TO CARD</button>
-                </div>
-                <div class="card-item fruits">
-                    <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/grapes.jpg" alt="">
-                    <p id="title">Corn - 1 KG</p>
-                    <p id="cost">75</p>
-                    <button class="btn-add" type="button">ADD TO CARD</button>
-                </div>
-                <div class="card-item fruits">
-                    <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/mango.jpg" alt="">
-                    <p id="title">Corn - 1 KG</p>
-                    <p id="cost">75</p>
-                    <button class="btn-add" type="button">ADD TO CARD</button>
-                </div>
-                <div class="card-item fruits">
-                    <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/musk-melon.jpg" alt="">
-                    <p id="title">Corn - 1 KG</p>
-                    <p id="cost">75</p>
-                    <button class="btn-add" type="button">ADD TO CARD</button>
-                </div>
-                <div class="card-item vegetables">
-                    <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/capsicum.jpg" alt="">
-                    <p id="title">Corn - 1 KG</p>
-                    <p id="cost">75</p>
-                    <button class="btn-add" type="button">ADD TO CARD</button>
-                </div>
-                <div class="card-item vegetables">
-                    <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/button-mushroom.jpg" alt="">
-                    <p id="title">Corn - 1 KG</p>
-                    <p id="cost">75</p>
-                    <button class="btn-add" type="button">ADD TO CARD</button>
-                </div>
-                <div class="card-item vegetables">
-                    <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/potato.jpg" alt="">
-                    <p id="title">Corn - 1 KG</p>
-                    <p id="cost">75</p>
-                    <button class="btn-add" type="button">ADD TO CARD</button>
-                </div>
-                <div class="card-item vegetables">
-                    <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/pumpkin.jpg" alt="">
-                    <p id="title">Corn - 1 KG</p>
-                    <p id="cost">75</p>
-                    <button class="btn-add" type="button">ADD TO CARD</button>
-                </div>
-
-                <div class="card-item fruits">
-                    <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/orange.jpg" alt="">
-                    <p id="title">Corn - 1 KG</p>
-                    <p id="cost">75</p>
-                    <button class="btn-add" type="button">ADD TO CARD</button>
-                </div>
-                <div class="card-item fruits">
-                    <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/pears.jpg" alt="">
-                    <p id="title">Corn - 1 KG</p>
-                    <p id="cost">75</p>
-                    <button class="btn-add" type="button">ADD TO CARD</button>
-                </div>
-                <div class="card-item fruits">
-                    <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/pomegranate.jpg" alt="">
-                    <p id="title">Corn - 1 KG</p>
-                    <p id="cost">75</p>
-                    <button class="btn-add" type="button">ADD TO CARD</button>
-                </div>
-                <div class="card-item fruits">
-                    <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/raspberry.jpg" alt="">
-                    <p id="title">Corn - 1 KG</p>
-                    <p id="cost">75</p>
-                    <button class="btn-add" type="button">ADD TO CARD</button>
-                </div>
-                <div class="card-item fruits">
-                    <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/strawberry.jpg" alt="">
-                    <p id="title">Corn - 1 KG</p>
-                    <p id="cost">75</p>
-                    <button class="btn-add" type="button">ADD TO CARD</button>
-                </div>
-                <div class="card-item fruits">
-                    <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/water-melon.jpg" alt="">
-                    <p id="title">Corn - 1 KG</p>
-                    <p id="cost">75</p>
-                    <button class="btn-add" type="button">ADD TO CARD</button>
-                </div>
-                <div class="card-item nuts">
-                    <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/almonds.jpg" alt="">
-                    <p id="title">Corn - 1 KG</p>
-                    <p id="cost">75</p>
-                    <button class="btn-add" type="button">ADD TO CARD</button>
-                </div>
-                <div class="card-item nuts">
-                    <img src="https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/pista.jpg" alt="">
-                    <p id="title">Corn - 1 KG</p>
-                    <p id="cost">75</p>
-                    <button class="btn-add" type="button">ADD TO CARD</button>
-                </div>
-
             </div>
         </div>
     </section>
     <div class="footer">
-        jhjja
     </div>
     <div id="backtop">
         <div style="margin:auto;">
-
             <i class="bi bi-arrow-up"></i>
         </div>
     </div>

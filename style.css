@@ -1,6 +1,7 @@
 :root {
     --green-main: #077915;
     --white: #fff;
+    outline: none;
 }
 
 * {
@@ -10,7 +11,7 @@
 }
 
 nav .cart {
-    margin-right: 5%;
+    margin-right: 10%;
 }
 
 a ul {
@@ -28,7 +29,7 @@ a ul {
 
 a:hover>ul {
     visibility: visible;
-    opacity: 1;
+    opacity: 0.9;
 }
 
 button,
@@ -48,24 +49,26 @@ nav {
     height: 90px;
     background-color: var(--green-main);
     border: 0 solid var(--green-main);
-    box-shadow: 0 10px 10px 0 rgba(181, 180, 180, 0.2);
+    box-shadow: 0 10px 10px rgba(181, 180, 180, 0.2);
     transition: all 0.1s linear;
 }
 
 .cart a {
-    font-size: 2rem;
+    font-size: 3vh;
     color: var(--white);
 }
 
 #logo {
+    margin-left: 15%;
     cursor: pointer;
     color: white;
-    font-size: 40px;
+    font-size: 3vh;
     letter-spacing: 5px;
     text-transform: uppercase;
 }
 
-.search {
+
+/* .search {
     display: flex;
 }
 
@@ -96,7 +99,7 @@ nav {
 
 .search input:active {
     box-shadow: 0 2px 5px var(--green-main);
-}
+} */
 
 section {
     background-color: #f5f5f5;
@@ -121,54 +124,52 @@ ul {
     list-style: none;
 }
 
-.main .left {
-    min-height: 1000px;
-    background-color: white;
-    min-width: 15%;
-    max-width: 15%;
+.nav ul {
+    letter-spacing: 1px;
+    font-size: 1.7vh;
+    background-color: var(--green-main);
 }
 
-.main .left ul li {
+.nav ul {
     background-color: var(--green-main);
     color: white;
-    padding: 10px 10px;
-    border-bottom: 5px white solid;
     transition: 0.25s linear;
 }
 
-.main .content {
-    row-gap: 30px;
-    justify-content: space-around;
-    display: grid;
-    column-gap: 50px;
-    grid-template-columns: auto auto auto auto;
-    width: 1200px;
+.nav ul li {
+    border-bottom: 1px white solid;
 }
 
-.main .left ul li:hover {
+.nav ul li:hover {
     cursor: pointer;
-    background-color: rgba(7, 121, 21, 0.9);
+    opacity: 0.7;
+    color: var(--green-main);
+    background-color: white;
 }
 
 .card-item {
+    font-size: 1.7vh;
+    border-radius: 10px;
     background-color: white;
     text-align: center;
-    padding-bottom: 20px;
-    width: 250px;
-    transition: all 0.2s linear;
-    max-height: 310px;
+    padding-bottom: 10%;
+    width: 90%;
+    transition: all 0.2s ease;
     box-shadow: 0 5px 5px 0 rgba(181, 180, 180, 0.2);
 }
 
 .card-item img {
-    width: 205.16px;
-    height: 205.16px;
+    width: 100%;
+    height: 100%;
 }
 
 .card-item .btn-add {
+    font-size: 1.5vh;
+    outline: none;
+    border-radius: 10px;
     background-color: var(--green-main);
     color: white;
-    padding: 5px 10px;
+    padding: 5% 10%;
     border: #077915 solid 1px;
     overflow: hidden;
     position: relative;
@@ -242,8 +243,13 @@ ul {
 
 .card-item #title,
 #cost {
-    font-size: 20px;
-    margin-bottom: 0.5em;
+    font-size: 120%;
+    margin-bottom: 1em;
+}
+
+.card-item {
+    margin-top: 10%;
+    margin-bottom: 15%;
 }
 
 .card-item:hover {
@@ -270,8 +276,4 @@ ul {
 
 #backtop:active {
     box-shadow: 0 2px 5px var(--green-main);
-}
-
-.footer {
-    min-height: 200px;
 }
